@@ -9,7 +9,7 @@ RUN tar -xvzf digibyte-${digibyteVersion}-x86_64-linux-gnu.tar.gz && rm -f digib
 RUN rsync -av /usr/local/bin/digibyte-${digibyteVersion}/* /usr/local/
 RUN rm -rf /usr/local/bin/digibyte-${digibyteVersion}
 RUN tree -a /usr/local/bin
-VOLUME /root/.bitmonero
+VOLUME /root/.digibyte
 EXPOSE 12024
 
 ENTRYPOINT ["digibyted"]
